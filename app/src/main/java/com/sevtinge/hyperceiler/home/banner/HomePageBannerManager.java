@@ -179,13 +179,7 @@ public class HomePageBannerManager {
     }
 
     private static BannerBean createWarningBannerIfNeeded(Context context) {
-        if (!SignUtils.isSignCheckPass(context)) {
-            return createWarningBanner(
-                "warning_sign",
-                context.getString(R.string.headtip_warn_sign_verification_failed),
-                null
-            );
-        }
+
         if (isUnofficialRom(context)) {
             return createWarningBanner(
                 "warning_rom",
@@ -200,13 +194,7 @@ public class HomePageBannerManager {
                 BannerCallback.ACTION_OPEN_FRAMEWORK_WARNING_HELP
             );
         }
-        if (getSupportStatus() != SUPPORT_FULL) {
-            return createWarningBanner(
-                "warning_sysver",
-                context.getString(R.string.headtip_warn_unsupport_sysver),
-                null
-            );
-        }
+
         return null;
     }
 

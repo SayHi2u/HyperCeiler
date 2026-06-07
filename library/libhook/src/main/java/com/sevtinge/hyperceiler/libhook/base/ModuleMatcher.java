@@ -147,6 +147,14 @@ public class ModuleMatcher {
             return true;
         }
 
+        // 国际版桌面兼容映射 (com.mi.android.globallauncher)
+        // 内部类名完全相同 (com.miui.home.*)，仅 OS3+ 模块适用
+        if ("com.mi.android.globallauncher".equals(packageName)
+            && "com.miui.home".equals(data.targetPackage)
+            && data.minOSVersion >= 3.0F) {
+            return true;
+        }
+
         // SystemServer 不参与通配匹配
         if (context.isSystemServer) {
             return false;

@@ -32,7 +32,7 @@
 
     <string-array name="restart_apps_packagename">
         <item>com.android.systemui</item>
-        <item>com.miui.home</item>
+        <item>com.mi.android.globallauncher</item>
         <item>com.android.settings</item>
         <item>com.miui.securitycenter</item>
         <!--<item>com.miui.personalassistant</item>
