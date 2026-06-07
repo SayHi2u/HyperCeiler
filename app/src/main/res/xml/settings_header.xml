@@ -226,9 +226,10 @@
         android:title="@string/guard_provider_hyperos"
         app:inflatedXml="@xml/guard_provider"/>
 
+
     <header
         android:icon="@drawable/ic_default"
-        android:id="@+id/home_global"
+        android:id="@+id/home"
         android:summary="com.mi.android.globallauncher"
         android:title="@string/mihome"
         android:fragment="com.sevtinge.hyperceiler.hooker.HomeFragment"/>
