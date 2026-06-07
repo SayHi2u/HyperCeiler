@@ -43,7 +43,7 @@ public class HomeFragment extends DashboardFragment {
     public void initPrefs() {
         mHeader = findPreference("prefs_key_home_unsupported");
 
-        boolean check = CheckModifyUtils.INSTANCE.getCheckResult(getContext(), "com.miui.home");
+        boolean check = CheckModifyUtils.INSTANCE.getCheckResult(getContext(), "com.mi.android.globallauncher");
         boolean isDebugMode = getSharedPreferences().getBoolean("prefs_key_development_debug_mode", false);
 
         mHeader.setVisible(check && !isDebugMode);
