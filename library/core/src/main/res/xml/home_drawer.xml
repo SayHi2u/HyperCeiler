@@ -19,7 +19,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:myLocation="@string/home_drawer"
-    app:quick_restart="com.miui.home">
+    app:quick_restart="com.mi.android.globallauncher">
     <PreferenceCategory>
         <SwitchPreference
             android:defaultValue="false"
