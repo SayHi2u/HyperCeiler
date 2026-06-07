@@ -59,7 +59,7 @@ jobs:
           cache-overwrite-existing: true
 
       - name: Create Sign File
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        if: github.event_name != 'pull_request'
         run: |
           touch signing.properties
           echo storePassword=${{ secrets.KEY_STORE_PASSWORD }} >> signing.properties
@@ -71,7 +71,7 @@ jobs:
           echo "GIT_TOKEN=${{ secrets.GIT_TOKEN }}" >> $GITHUB_ENV
 
       - name: Build with Gradle (Canary)
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        if: github.event_name != 'pull_request'
         shell: bash
         run: |
           ./gradlew assembleCanary
